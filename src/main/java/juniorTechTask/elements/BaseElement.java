@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class BaseElement {
@@ -44,11 +45,25 @@ public class BaseElement {
         return DriverUtil.instanceWebDriver().findElement(locator);
     }
 
+    protected List<WebElement> findElements() {
+        log.info("Create elements" + name);
+        return DriverUtil.instanceWebDriver().findElements(locator);
+    }
+
+    public boolean isNotDisplayed() {
+        log.info("Сheck if the element is not displayed");
+        if(findElements().size() == 0) {
+            return true;
+        } return false;
+    }
+
     public String getText() {
         log.info("Get text from " + name);
-
         return findElement().getText();
     }
 
-
+    public String getAttribute(String name) {
+        log.info("Get attribute " + name);
+        return findElement().getAttribute(name);
+    }
 }
