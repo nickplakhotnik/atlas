@@ -2,6 +2,7 @@ package juniorTechTask.elements;
 
 import juniorTechTask.utils.LoggerUtil;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.logging.Logger;
 

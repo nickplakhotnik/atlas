@@ -19,6 +19,8 @@ public class MainPage extends BaseForm {
             "Chosen Check In");
     private TextField chosenCheckOut = new TextField(By.xpath("//div[@data-placeholder='Check-out']"),
             "Chosen Check Out");
+    private Button attractionsButton = new Button(By.xpath("//span[contains(text(), 'Attractions')]"),
+            "Attractions Button");
 
     public MainPage() {
         super(By.xpath("//div[@class='hero-banner-searchbox']"), "Main Page");
@@ -73,5 +75,9 @@ public class MainPage extends BaseForm {
 
     public String getChosenCheckOut() {
         return chosenCheckOut.getText();
+    }
+
+    public void clickOnAttractionsButton() {
+        attractionsButton.clickAndWait();
     }
 }

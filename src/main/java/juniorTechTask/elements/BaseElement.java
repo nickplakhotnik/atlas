@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class BaseElement {
-    private WebDriverWait wait = new WebDriverWait(DriverUtil.instanceWebDriver(), Duration.ofSeconds(10));
+    protected WebDriverWait wait = new WebDriverWait(DriverUtil.instanceWebDriver(), Duration.ofSeconds(10));
     private static Logger log = LoggerUtil.getLog(BaseElement.class.getName());
     private By locator;
     private String name;
@@ -42,7 +42,7 @@ public class BaseElement {
 
     protected WebElement findElement() {
         log.info("Create element " + name);
-        return DriverUtil.instanceWebDriver().findElement(locator);
+        return wait.until(ExpectedConditions.visibilityOf(DriverUtil.instanceWebDriver().findElement(locator)));
     }
 
     protected List<WebElement> findElements() {
