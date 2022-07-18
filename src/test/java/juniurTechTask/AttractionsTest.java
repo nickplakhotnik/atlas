@@ -12,11 +12,6 @@ public class AttractionsTest extends BaseTest {
     @Test
     public void attractionsTest() {
         MainPage mainPage = new MainPage();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         Assert.assertTrue(mainPage.isPageOpened(), "Main Page is not open");
         Assert.assertTrue(mainPage.getCurrentLanguage().contains(testData.getLanguage()), "Language is not correct");
 
