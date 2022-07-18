@@ -1,9 +1,8 @@
-package juniurTechTask;
+package juniorTechTask;
 
 import juniorTechTask.pages.AttractionsPage;
 import juniorTechTask.pages.AttractionsResultSearchPage;
 import juniorTechTask.pages.MainPage;
-import org.checkerframework.checker.units.qual.A;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

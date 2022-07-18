@@ -1,6 +1,5 @@
-package juniurTechTask;
+package juniorTechTask;
 
-import juniorTechTask.DriverManager;
 import juniorTechTask.model.Config;
 import juniorTechTask.model.TestData;
 import juniorTechTask.utils.GsonParser;

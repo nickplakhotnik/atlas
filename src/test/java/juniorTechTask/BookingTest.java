@@ -1,4 +1,4 @@
-package juniurTechTask;
+package juniorTechTask;
 
 import juniorTechTask.pages.MainPage;
 
